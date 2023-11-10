@@ -1,0 +1,115 @@
+	.faculty-icon-list{
+		text-align: center;
+		margin: 15px 0;
+	}
+	.faculty-icon-list ul {
+		padding: 0;
+		list-style: none;
+		display: inline-block;
+		margin: 10px 0;
+	}
+	.faculty-icon-list ul li {
+		display: inline-block;
+		margin:0 5px;
+		vertical-align: middle;
+	}
+	.faculty-icon-list ul li a {
+		/*padding: 5px;*/
+		color: #fff;
+		text-decoration: none;
+	}
+	.faculty-icon-list ul li a img{
+		max-height: 32px;
+	}
+
+	.faculty-address-container i {
+		color: #2257bf;
+		font-size: 20px;
+		background-color: #fff;
+		padding: 5px;
+		box-shadow: 0px 2.20399px 3.22122px rgb(0 0 0 / 7%);
+		margin-right: 10px;
+	}
+	/*.faculty-tab .nav-item{
+		margin: 0 5px;
+	}
+	.faculty-tab .nav-item::before{
+		background-color: #00b2ff;
+		content: none;
+	}
+	.faculty-tab .nav-item .nav-link{
+		background-color: #00b2ff;
+		border-radius: 5px;
+		height: 76px;
+		min-width: 170px
+	}
+	.faculty-tab .nav-item .active{
+		background-color: #18AD4D;
+	}
+	.faculty-tab .nav-item img{
+		max-height: 36px;
+		margin-top: 10px;
+		margin-right: 5px;
+		margin-left: 5px;
+	}*/
+	
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active{
+		border: none;
+		background-color: #18AD4D;
+	}
+	.public-tab .nav-item .nav-link{
+		color: #000 !important;
+		border-bottom: 2px solid #000 !important;
+		word-break: break-all;
+		font-size: 14px !important;
+	}
+	.public-tab .nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active{
+		background-color: #fff !important;
+		color:#00b2ff !important;
+		border-bottom: 2px solid #00b2ff !important;
+	}
+	.public-tab .nav-item::before{
+		background-color: #00b2ff;
+		content: none;
+	}
+	@media only screen and (max-width: 600px) {
+		.faculty-tab .nav-item {
+		margin: 0px;
+		}
+	}
+	.rep-icon{
+		position: fixed;
+		top:250px;
+		right: 0px;
+		z-index: 999;
+	}
+	.rep-icon ul{
+		list-style: none;
+	}
+	.rep-icon ul li{
+		padding: 12px 15px 10px 15px;
+		background-color: #00b2ff;
+		margin:10px 0;
+		transition: 1s;
+	}
+	.rep-icon ul li a{
+		color:#fff;
+		text-decoration: none;
+		font-size: 18px;
+	}
+	.rep-icon ul li:hover{
+		background-color: #18AD4D;
+		transition: 1s;
+	}
+	.ui-tab > a >.bg-new-info{
+		background: #00b2ff;
+	}
+	.ui-tab.ui-tabs-active > a > .bg-new-info{
+		background: #18AD4D;
+	}
+
+	#tabs .nav-tabs .nav-link{
+
+	}

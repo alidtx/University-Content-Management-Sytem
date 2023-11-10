@@ -1,0 +1,85 @@
+@extends('backend.layouts.app')
+@section('content')
+<!-- Content Header (Page header) -->
+
+<style>
+    .des{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 20ch;
+     }
+</style>
+
+
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">List of Department Home</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Department Home</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-lg-12">
+      <div class="card">
+
+        <div class="card-header">
+          <a href="{{ route('manage_department_home.add', $dept_id) }}" class="btn btn-sm btn-info"><i class="fas fa-plus"></i> Add Department Home</a>
+        </div>
+
+        <div class="card-body">
+          <table id="dataTable" class="table table-sm table-bordered table-striped">
+            <thead>
+              <tr>
+                <th width="5%">#</th>
+                <th width="10%">Department</th>
+                <th width="10%">Type</th>
+                <th width="20%">Description</th>
+                <th width="5%">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($departmentHome as $d)
+              <tr>
+                <td> {{$loop->iteration}}</td>
+                <td>{{$d->department->name}}</td>
+
+                @if ($d->type_id == 1)
+                <td>Objectives</td>
+                @elseif ($d->type_id == 2)
+                <td>Mission & Vision</td>
+                @elseif ($d->type_id == 3)
+                <td>Contact</td>
+                @endif
+
+                <td class="des">{!! $d['about'] !!}</td>
+                <td><a href="{{ route('manage_department_home.edit',[$d->department_id, $d->id]) }}" class="btn btn-primary btn-flat btn-sm edit" data-type="image" data-id="" data-table="Slider"><i class="fas fa-edit"></i></a> | <a  class="delete btn btn-danger btn-flat btn-sm" data-route = "{{ route('manage_department_home.delete') }}" data-id="{{ $d->id }}" ><i class="fas fa-trash"></i></a>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+</div>
+<!--/. container-fluid -->
+</section>
+@endsection
+
